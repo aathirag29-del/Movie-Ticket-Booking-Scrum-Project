@@ -1,294 +1,280 @@
 # Movie Ticket Booking Application
 
-## 1. Project Description
+**Agile/Scrum Mini-Project — Assignment 2**
 
-The **Movie Ticket Booking Application** is a web-based application developed using Flask and SQLite. It provides a simple platform for users to browse movies, search and filter movies, select cinemas and show timings, choose seats, complete a demo payment, generate an e-ticket, view booking history, submit reviews, and receive personalized movie recommendations.
+A Flask + SQLite movie ticket booking application that allows users to register, browse movies, search and filter movies, select cinema and show timings, choose seats, complete a demo payment, receive an e-ticket, view booking history, submit reviews, and get personalized movie recommendations.
 
-The application includes movies in **Tamil, English, Malayalam, and Telugu**.
+## 1. Project Title and Brief Description
 
----
+### Project Title
+**Movie Ticket Booking Application**
+
+### Description
+The Movie Ticket Booking Application is a web-based application developed using Flask and SQLite. It provides a simple platform for users to browse movies, select shows, choose seats, complete a demo payment, and manage their bookings.
+
+The application includes Tamil, English, Malayalam, and Telugu movies and provides a responsive user interface.
 
 ## 2. Problem Statement and Objectives
 
 ### Problem Statement
 
-Movie ticket booking involves checking movie details, show timings, cinema information, seat availability, and booking details. This project provides a simple web-based system that brings these activities together in one application.
+Traditional movie ticket booking requires users to check movie details, show timings, seat availability, and booking information separately. This project provides a single web application to simplify the movie ticket booking process.
 
 ### Objectives
 
-- To develop a simple and user-friendly movie ticket booking application.
-- To provide movie search and filtering facilities.
-- To display cinema and show-time information.
-- To allow users to select available seats.
-- To provide a demo online payment process.
-- To generate an electronic ticket after booking.
-- To maintain booking history.
-- To allow users to submit movie reviews.
-- To provide personalized movie recommendations.
-
----
+- Provide user registration and login.
+- Allow users to browse available movies.
+- Provide movie search and filtering.
+- Display cinema and show timings.
+- Allow users to select available seats.
+- Provide a demo online payment process.
+- Generate an e-ticket after successful booking.
+- Maintain booking history.
+- Allow users to submit movie reviews.
+- Provide personalized movie recommendations.
 
 ## 3. Features / Modules Implemented
 
-### User Registration and Login
+### User Management
 - User registration.
 - User login and logout.
-- Input validation.
-- Password hashing.
+- Password hashing and validation.
 
-### Movie Search and Filtering
-- Browse available movies.
-- Search movies by name.
-- Filter movies by language.
-- Filter movies by genre.
+### Movie Browsing
+- 16 sample movies.
+- Tamil, English, Malayalam, and Telugu movies.
+- Search by movie name.
+- Filter by language and genre.
+- Movie details and show information.
 
 ### Cinema and Show Timings
 - Cinema selection.
-- Show-time selection.
-- Movie and cinema details.
+- Available show timings.
+- Movie and show selection.
 
 ### Seat Selection
-- Display available and booked seats.
-- Select seats for a booking.
-- Supports selection of up to 8 seats.
+- Interactive seat selection.
+- Selection of 1–8 seats.
+- Already-booked seats are displayed as unavailable.
 
-### Demo Payment
-- UPI payment.
-- Card payment.
-- Net Banking.
-- Demo payment confirmation without real transactions.
+### Payment
+- Demo UPI payment.
+- Demo Card payment.
+- Demo Net Banking payment.
+- Payment validation.
+
+> This is a demonstration payment system and does not process real money.
 
 ### E-Ticket
 - Booking confirmation.
-- Selected movie, cinema, show timing, and seat details.
-- E-ticket generation.
+- Ticket generation.
+- Movie, cinema, show, seat, and booking details.
 
 ### Booking History
-- View previous bookings.
+- Users can view their previous bookings.
 
 ### Reviews
-- Submit movie ratings and reviews.
+- Users can submit movie ratings and reviews.
+- Ratings are used by the recommendation feature.
 
 ### Personalized Recommendations
-- Recommendations based on preferred language.
-- Highly rated movies and preferred genres are considered.
-
----
+The recommendation system uses the user's preferred language and highly rated movie genres to suggest suitable movies.
 
 ## 4. Technology Stack and Tools Used
 
-| Component | Technology / Tool |
+| Category | Technology / Tool |
 |---|---|
-| Frontend | HTML, CSS, JavaScript |
+| Frontend | HTML5, CSS3, JavaScript |
 | Backend | Python, Flask |
 | Database | SQLite |
+| Authentication | Werkzeug Password Hashing |
 | Version Control | Git |
 | Repository | GitHub |
-| Development | Visual Studio Code / PowerShell |
+| Development Tool | Visual Studio Code / Any Code Editor |
 | Browser | Google Chrome / Microsoft Edge |
-
----
 
 ## 5. Prerequisites and Installation Steps
 
 ### Prerequisites
 
+The following software is required:
+
 - Python 3.x
 - Git
 - Web browser
-- Internet connection for installing Python packages
+- Internet connection for initial package installation
 
 ### Installation
 
-#### Step 1: Clone the Repository
+Clone the repository:
 
 ```powershell
 git clone https://github.com/aathirag29-del/Movie-Ticket-Booking-Scrum-Project.git
 ```
 
-#### Step 2: Enter the Project Folder
+Navigate to the project folder:
 
 ```powershell
 cd Movie-Ticket-Booking-Scrum-Project
 ```
 
-#### Step 3: Create a Virtual Environment
+Create a virtual environment:
 
 ```powershell
 python -m venv venv
 ```
 
-#### Step 4: Activate the Virtual Environment
-
-For Windows PowerShell:
+Activate the virtual environment in Windows PowerShell:
 
 ```powershell
 venv\Scripts\activate
 ```
 
-#### Step 5: Install Dependencies
+Install the required packages:
 
 ```powershell
 pip install -r requirements.txt
 ```
 
----
-
 ## 6. Instructions to Run the Application
 
-Run the following command:
+Run the Flask application:
 
 ```powershell
 python app.py
 ```
 
-The Flask application will start on:
+The application will run at:
 
 ```text
 http://127.0.0.1:5000
 ```
 
-Open the above address in a web browser to access the application.
+Open the above address in a web browser.
 
----
+### Basic Usage
+
+1. Register a new account.
+2. Login using the registered account.
+3. Browse available movies.
+4. Search or filter movies.
+5. Select a movie.
+6. Select cinema and show timing.
+7. Choose available seats.
+8. Continue to checkout.
+9. Select a demo payment method.
+10. Confirm the booking.
+11. View the generated e-ticket.
+12. Check booking history.
+13. Submit reviews and view recommendations.
 
 ## 7. Sample Inputs and Outputs
 
-### User Registration
-
-**Input:**
+### Sample Input
 
 ```text
-Name: Aathira
+Username: Aathira
 Email: aathira@example.com
 Password: ********
+
+Movie: Retro
+Language: Tamil
+Show Time: 06:30 PM
+Seats: A1, A2
+Payment Method: UPI
 ```
 
-**Output:**
+### Sample Output
 
 ```text
-Registration successful
+Booking Confirmed
+
+Movie: Retro
+Show Time: 06:30 PM
+Seats: A1, A2
+Payment Status: Successful
+E-Ticket: Generated
 ```
 
-### Movie Search
-
-**Input:**
+### Movie Search Example
 
 ```text
 Search: Tamil
 ```
 
-**Output:**
+Output:
 
 ```text
-Matching Tamil movies are displayed.
+Tamil movies matching the selected search/filter criteria are displayed.
 ```
-
-### Seat Selection
-
-**Input:**
-
-```text
-Seats: A1, A2
-```
-
-**Output:**
-
-```text
-Selected seats: A1, A2
-```
-
-### Booking
-
-**Input:**
-
-```text
-Movie: Selected Movie
-Cinema: Selected Cinema
-Show Time: Selected Show
-Seats: A1, A2
-Payment: Demo UPI
-```
-
-**Output:**
-
-```text
-Booking confirmed
-E-ticket generated
-```
-
----
 
 ## 8. Testing Performed and Results
 
-The main features of the application were tested during development.
+The application was tested for the major functional modules.
 
-| Test Case | Expected Result | Result |
+| Test Case | Expected Result | Status |
 |---|---|---|
-| User Registration | User can register successfully | Passed |
-| User Login | Registered user can log in | Passed |
+| User Registration | New user account is created | Passed |
+| User Login | Valid user can login | Passed |
+| Invalid Login | Invalid credentials are rejected | Passed |
 | Movie Search | Matching movies are displayed | Passed |
-| Language Filter | Movies are filtered by language | Passed |
-| Genre Filter | Movies are filtered by genre | Passed |
-| Cinema Selection | Cinema can be selected | Passed |
-| Show-Time Selection | Available show can be selected | Passed |
+| Language Filter | Movies of selected language are displayed | Passed |
+| Genre Filter | Movies of selected genre are displayed | Passed |
+| Show Selection | Available shows are displayed | Passed |
 | Seat Selection | Available seats can be selected | Passed |
-| Demo Payment | Payment confirmation is displayed | Passed |
+| Booked Seat Check | Already booked seats cannot be selected | Passed |
+| Demo Payment | Valid payment details are accepted | Passed |
 | E-Ticket | Ticket is generated after booking | Passed |
 | Booking History | Previous bookings are displayed | Passed |
-| Reviews | User can submit a review | Passed |
-| Recommendations | Recommended movies are displayed | Passed |
+| Review Submission | User can submit a review | Passed |
+| Recommendations | Suitable movies are recommended | Passed |
 
-Detailed test cases are available in:
+## 9. Team Member Details and Individual Contributions
 
-```text
-docs/TEST_CASES.md
-```
+### Team Members
 
----
+| Team Member | Register Number | Contribution |
+|---|---|---|
+| Aathira G | 2503917720522125 | Backend/application workflow, registration and login, movie search/filtering, booking and seat-selection workflow, Git/GitHub version control, README and project documentation |
+| Ramya Sri S | 2503917720522198 | Frontend interface and page design, movie/show-time/checkout/e-ticket pages, reviews and recommendations, application testing, testing evidence and documentation |
 
-## 9. Team Members and Individual Contributions
+### Scrum / Development Workflow
 
-### Team Member 1
+The project was developed using an Agile/Scrum-oriented workflow.
 
-**Name:** Aathira G  
-**Register Number:** 2503917720522125  
-**Contribution:**
-- Developed the Flask backend and application workflow.
-- Worked on user registration and login functionality.
-- Implemented movie search, filtering, booking, and seat selection.
-- Worked on Git and GitHub version control.
-- Maintained the project README and documentation.
+- **Sprint 1:** Registration and Login
+- **Sprint 2:** Movie Search, Filtering and Show Timings
+- **Sprint 3:** Seat Selection and Booking
+- **Sprint 4:** Demo Payment and E-Ticket
+- **Sprint 5:** Booking History, Reviews and Recommendations
 
-### Team Member 2
+Git and GitHub were used to maintain the project source code and development history. A separate feature branch was used for development before integration into the main branch.
 
-**Name:** Ramya Sri S  
-**Register Number:** 2503917720522198  
-**Contribution:**
-- Worked on the frontend interface and page design.
-- Worked on movie display, show-time, checkout, and e-ticket pages.
-- Worked on reviews and movie recommendation features.
-- Performed application testing and identified functional issues.
-- Contributed to project documentation and testing evidence.
+## 10. Known Limitations and Possible Future Enhancements
 
-## 10. Known Limitations and Future Enhancements
+### Limitations
 
-### Known Limitations
-
-- The payment system is a demo payment system and does not process real transactions.
-- The application uses sample movie and cinema data.
-- Real-time cinema availability is not implemented.
-- Real-time seat synchronization is not implemented.
-- The recommendation system uses simple rule-based logic.
+- Payment is a demo implementation and does not process real transactions.
+- Movie and cinema information is based on sample data.
+- The application does not use a live movie or cinema API.
+- Seat availability is maintained within the application database.
+- Recommendations use a simple rule-based approach.
 
 ### Future Enhancements
 
-- Integration with a real payment gateway.
-- Real-time movie and theatre availability.
-- Real-time seat locking.
-- Integration with external movie APIs.
-- Advanced machine-learning-based recommendations.
-- Email or SMS ticket notifications.
-- QR code generation and ticket verification.
-- Admin dashboard for managing movies, cinemas, shows, and bookings.
-- Deployment to a cloud platform.
+- Integrate real payment gateways.
+- Add real-time movie and cinema information through APIs.
+- Add email and SMS ticket notifications.
+- Add QR code-based e-tickets.
+- Improve the recommendation system using machine learning.
+- Add administrator functionality for managing movies, cinemas, shows, and bookings.
+- Add real-time seat availability.
+- Deploy the application to a cloud platform.
+
+## Project Status
+
+The application has been implemented and tested as a working mini-project. The project uses Flask, SQLite, HTML, CSS and JavaScript and follows a Git-based development workflow with a feature branch and master branch.
+
+## GitHub Repository
+
+https://github.com/aathirag29-del/Movie-Ticket-Booking-Scrum-Project
