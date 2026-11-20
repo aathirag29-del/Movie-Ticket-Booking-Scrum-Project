@@ -35,9 +35,9 @@ The recommendation feature is intentionally simple and explainable. It first use
 
 The supplied Assignment 2 guidelines require a working app, organized source, meaningful commits, a feature/development branch and merge, README, testing evidence, application screenshots, GitHub screenshots and a PDF report. See `docs/` for supporting material.
 
-\## Development Update
-
-
+## Development Update
 
 The movie booking application was developed using Flask, SQLite, HTML, CSS and JavaScript. The project supports user registration, movie browsing, seat selection, booking, payment demo and e-ticket generation.
+
+The project follows a Git-based development workflow using a feature branch for development and the master branch for the integrated project.
 
