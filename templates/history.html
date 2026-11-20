@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block title %}Bookings{% endblock %}{% block content %}<h1>My Bookings 📜</h1>{% for b in bookings %}<div class="history"><div><h3>{{b.movie_title}}</h3><p>{{b.cinema}} • {{b.show_time}} • Seats: {{b.seats}} • ₹{{b.total}}</p></div><a class="btn" href="/ticket/{{b.id}}">Ticket</a></div>{% else %}<p>No bookings yet.</p>{% endfor %}{% endblock %}
