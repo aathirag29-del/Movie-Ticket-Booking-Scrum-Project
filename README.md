@@ -292,3 +292,9 @@ docs/TEST_CASES.md
 - QR code generation and ticket verification.
 - Admin dashboard for managing movies, cinemas, shows, and bookings.
 - Deployment to a cloud platform.
+
+- ## Project Status
+
+The application has been implemented and tested as a working mini-project.
+The project uses Git and GitHub for version control with a feature branch
+and development workflow.
