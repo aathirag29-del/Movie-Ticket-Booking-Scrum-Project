@@ -1,1 +1,49 @@
-{% extends "base.html" %}{% block title %}Register{% endblock %}{% block content %}<div class="form"><h1>Create Account</h1><form method="post"><input name="name" placeholder="Name" required><input type="email" name="email" placeholder="Email" required><input type="password" name="password" placeholder="Password (6+ chars)" required><select name="preferred_language"><option>Tamil</option><option>English</option><option>Malayalam</option><option>Telugu</option></select><button class="btn full">Register</button></form></div>{% endblock %}
+{% extends "base.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+
+<div class="form auth-register">
+    <h1>Create Account</h1>
+    <p class="auth-subtitle">Join CineBook and start booking movies</p>
+
+    <form method="post">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Password (6+ chars)"
+            minlength="6"
+            required
+        >
+
+        <button class="btn register-btn full" type="submit">
+            Create Account
+        </button>
+
+    </form>
+
+    <p class="form-link">
+        Already have an account?
+        <a class="register-link" href="{{ url_for('login') }}">
+            Login
+        </a>
+    </p>
+</div>
+
+{% endblock %}
